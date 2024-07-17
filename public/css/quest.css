@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+form:not(#aing) {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    margin-top: -0.5px;
+}
+
+#modalOpenButton, #modalCloseButton {
+    cursor: pointer;
+  }
+  
+  #modalContainer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  #modalContent {
+    position: absolute;
+    background-color: #ffffff;
+    width: 900px;
+    height:400px;
+    border-radius: 10px;
+    padding: 15px;
+  }
+  
+  #modalContainer.hidden {
+    display: none;
+  }
+  
+  @font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+  font-family: 'S-CoreDream-3Light', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: white;
+}
+
+.header {
+  width: 1920px;
+  height: 115px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.header a {
+  text-decoration: none;
+  color: black;
+  font-size: 30.20px;
+  font-family: S-Core Dream;
+  font-weight: 500;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo img {
+  width: 71px;
+  height: 75px;
+  margin-right: 20px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-right div {
+  margin-left: 20px;
+}
+
+.profile-image {
+  width: 346px;
+  height: 346px;
+  position: absolute;
+  left: 223px;
+  top: 373px;
+  border-radius: 9999px;
+  border: 4px #C6D7F6 solid;
+}
+
+.username {
+  width: 368px;
+  position: absolute;
+  left: 212px;
+  top: 719px;
+  text-align: center;
+  color: black;
+  font-size: 52.46px;
+  font-family: S-Core Dream;
+  font-weight: 600;
+  line-height: 104.92px;
+}
+
+.dynamic-content {
+  width: 1129px;
+  min-height: 292px;
+  position: absolute;
+  left: 750px;
+  top: 412px;
+  background: #C6D7F6;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.heart-image {
+  margin: 10px;
+}

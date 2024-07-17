@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/award.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div style="width: 100%; height: 100%; position: relative; background: white">
+        <img style="width: 346px; height: 346px; left: 223px; top: 373px; position: absolute; border-radius: 9999px; border: 4px #C6D7F6 solid" src="/images/Shiroko.png" />
+        <div style="width: 368px; left: 212px; top: 719px; position: absolute; text-align: center; color: black; font-size: 52.46px; font-family: S-Core Dream; font-weight: 600; line-height: 104.92px; word-wrap: break-word"><%=username%></div>
+        <div style="width: 1920px; height: 115px; left: 0px; top: 0px; position: absolute; background: white; box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25)">
+            <div style="width: 170px; height: 39.48px; left: 1663px; top: 36px; position: absolute">
+                <div style="width: 40px; height: 37px; left: 0px; top: 0px; position: absolute">
+                    <div style="width: 40px; height: 15px; left: 0px; top: 22px; position: absolute; background: #DBDADA; border-top-left-radius: 16.04px; border-top-right-radius: 16.04px"></div>
+                    <div style="width: 20px; height: 20px; left: 10px; top: 0px; position: absolute; background: #DBDADA; border-radius: 9999px"></div>
+                </div>
+                <%if(!username){%>
+                    <div style="width: 114px; height: 35.48px; left: 56px; top: 4px; position: absolute; color: black; font-size: 30.20px; font-family: S-Core Dream; font-weight: 600; word-wrap: break-word" id="modalOpenButton">로그인</div>
+                    <%}%>
+                    <%if(username){%>
+                      <form action="/logout" method="POST">
+                     <div style="width: 114px; height: 35.48px; left: 56px; top: 4px;"><input type='submit' value="로그아웃" style="background-color:transparent;  border:0px transparent solid; position: absolute; color: black; font-size: 30.20px; font-family: S-Core Dream; font-weight: 600; word-wrap: break-word;margin-left:50px;margin-top: 3px;"></div>
+                    </form>
+                      <%}%>
+                <a href="heart"><div style="width: 114px; height: 35.48px; left: -180px; top: 1px; position: absolute; color: black; font-size: 30.20px; font-family: S-Core Dream; font-weight: 600;">mypage</div></a> 
+            </div>
+            <a href="/mission"> <div style="width: 269px; height: 88px; left: 143px; top: 41px; position: absolute; color: black; font-size: 30.20px; font-family: S-Core Dream; font-weight: 500; word-wrap: break-word">미션페이지</div></a>
+            <img style="width: 71px; height: 75px; left: 53px; top: 20px; position: absolute" src="/images/mission.png" />
+            <a href="/"> <div style="left: 805px; top: 28px; position: absolute; color: black; font-size: 50px; font-family: S-Core Dream; font-weight: 700; word-wrap: break-word">패밀리톡톡</div></a>
+            <div style="width: 67px; height: 54px; left: 1056px; top: 27px; position: absolute">
+                <div style="width: 17.64px; height: 26.91px; left: 24.65px; top: 13.12px; position: absolute">
+                    <div style="width: 17.64px; height: 16.19px; left: 0px; top: 0px; position: absolute; background: #FFBF00"></div>
+                    <div style="width: 9.72px; height: 16.78px; left: 4.09px; top: 10.14px; position: absolute; background: #FFBF00; border-radius: 11px"></div>
+                </div>
+                <div style="width: 16.09px; height: 25.15px; left: 25.44px; top: 13.92px; position: absolute">
+                    <div style="width: 8.66px; height: 14.65px; left: 3.85px; top: 10.50px; position: absolute; background: white; border-radius: 11px"></div>
+                    <div style="width: 67px; height: 54px; left: 1045px; top: 34px; position: absolute"></div>
+                </div>
+                <img style="width: 67px; height: 54px; left: -11px; top: 7px; position: absolute" src="/images/logo.png" />
+            </div>
+        </div>
+        <img style="width: 1927px; height: 565px; left: -7px; top: 797px; position: absolute" src="/images/down.png" />
+        <img style="width: 1920px; height: 258px; left: 0px; top: 115px; position: absolute" src="/images/up.png" />
+        <div style="width: 1129px; height: 292px; left: 750px; top: 412px; position: absolute; background: #C6D7F6; border-radius: 20px">
+            <%for(let i=0;i < heart;i++){%>
+                <img src="/images/3heart.png" style="margin-left: 30px; margin-top: 20px;">
+            <%}%>
+        </div>
+    </div>
+    <div id="modalContainer" class="hidden">
+        <div id="modalContent">
+          <form action="/login" method="POST">
+            <div class="mb-3">
+              <label for="formGroupExampleInput" class="form-label" style="font-size: 30px;">이름</label>
+              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="이름" name="username" style="height: 60px;">
+            </div>
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label" style="font-size: 30px;">비밀번호</label>
+              <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="비밀번호" name="password" style="height: 60px;">
+            </div>
+            <button type="button" class="btn btn-secondary" id="modalCloseButton" style="margin-left: 700px; ">취소</button>
+            <button type="submit" class="btn btn-primary">로그인</button>
+        </form>
+        </div>
+      </div>
+    <script src="/javascript/award.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
