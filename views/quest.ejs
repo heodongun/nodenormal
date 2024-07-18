@@ -15,9 +15,9 @@
         <div style="width: 677px; height: 357px; left: 358px; top: 373px; position: absolute; background: #F6EDC6; border-radius: 20px"></div>
         <div style="width: 1088px; height: 338px; left: 474px; top: 476px; position: absolute; background: #C6D7F6; border-radius: 20px"></div>
         <div style="left: 384px; top: 381px; position: absolute; text-align: center; color: black; font-size: 47.42px; font-family: S-Core Dream; font-weight: 600; line-height: 94.83px; word-wrap: break-word">오늘의 미션</div>
-        <div style="left: 505px; top: 502px; position: absolute; text-align: center; color: black; font-size: 43.65px; font-family: S-Core Dream; font-weight: 500; line-height: 87.31px; word-wrap: break-word" id="quest1">부모님에게 사랑한다고 전화로 말씀드리기</div>
-        <div style="left: 505px; top: 601px; position: absolute; text-align: center; color: black; font-size: 43.65px; font-family: S-Core Dream; font-weight: 500; line-height: 87.31px; word-wrap: break-word" id="quest2">부모님에게 아침인사 드리기</div>
-        <div style="left: 505px; top: 700px; position: absolute; text-align: center; color: black; font-size: 43.65px; font-family: S-Core Dream; font-weight: 500; line-height: 87.31px; word-wrap: break-word" id="quest3">부모님에게 저녁인사 드리기</div>
+        <div style="left: 505px; top: 502px; position: absolute; text-align: center; color: black; font-size: 43.65px; font-family: S-Core Dream; font-weight: 500; line-height: 87.31px; word-wrap: break-word" id="quest1"><%=quest1%></div>
+        <div style="left: 505px; top: 601px; position: absolute; text-align: center; color: black; font-size: 43.65px; font-family: S-Core Dream; font-weight: 500; line-height: 87.31px; word-wrap: break-word" id="quest2"><%=quest2%></div>
+        <div style="left: 505px; top: 700px; position: absolute; text-align: center; color: black; font-size: 43.65px; font-family: S-Core Dream; font-weight: 500; line-height: 87.31px; word-wrap: break-word" id="quest3"><%=quest3%></div>
 
         <!-- Wrap checkboxes in a single form -->
         <form id="missionForm">
@@ -51,13 +51,9 @@
             </div>
             
             <a href="heart"><div style="width: 114px; height: 35.48px; margin-left: 1483px; margin-top: 37px; position: absolute; color: black; font-size: 30.20px; font-family: S-Core Dream; font-weight: 600;">mypage</div></a> 
-            <a href="/mission"><div style="width: 269px; height: 88px; left: 143px; top: 41px; position: absolute; color: black; font-size: 30.20px; font-family: S-Core Dream; font-weight: 500; word-wrap: break-word">미션페이지</div></a> 
+            <a href="/mission"> <div style="width: 269px; height: 88px; left: 143px; top: 41px; position: absolute; color: black; font-size: 30.20px; font-family: S-Core Dream; font-weight: 500; word-wrap: break-word">미션페이지</div></a>
             <img style="width: 71px; height: 75px; left: 53px; top: 20px; position: absolute" src="/images/mission.png" />
-            <a href="/"><div style="left: 805px; top: 28px; position: absolute; color: black; font-size: 50px; font-family: S-Core Dream; font-weight: 700; word-wrap: break-word">패밀리톡톡</div></a>
-
-
-            <a href="/"><div style="left: 805px; top: 28px; position: absolute; color: black; font-size: 50px; font-family: S-Core Dream; font-weight: 700; word-wrap: break-word">패밀리톡톡</div></a>
-            <img style="width: 67px; height: 54px; left: 1045px; top: 34px; position: absolute" src="/images/logo.png" />
+            <a href="/"><img style="width:7%; left: 50%; top: 5px; position: absolute" src="/images/logo.png" /></a> 
         </div>
         <img style="width: 1920px; height: 258px; left: 0px; top: 115px; position: absolute" src="/images/up.png" />
     </div>
@@ -79,7 +75,7 @@
         </div>
       </div>
     
-    <input type="button" onclick="button()" class="btn btn-primary" id="confirmButton" style="left: 1433px; top: 838px; position: absolute; text-align: center; color: black; font-size: 33.23px; font-family: S-Core Dream; font-weight: 200; line-height: 66.45px;" value="제출하기">
+    <input type="button" onclick="button()" class="btn btn-primary" id="confirmButton" style="left: 1433px; top: 838px; position: absolute; text-align: center; color: white; font-size: 33.23px; font-family: S-Core Dream; font-weight: 200; line-height: 66.45px; border-radius:12px;" value="제출하기">
     
     <script src="/javascript/award.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
