@@ -7,6 +7,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 const session = require('express-session');
 const passport = require('passport');
+const { mongoURI } = require('./dev');
 const LocalStrategy = require('passport-local').Strategy;
 let quest1;
 let quest2;
@@ -28,7 +29,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 let db;
-const url = 'mongodb+srv://heodongun:heodongun0922@heodongun.zpzozxd.mongodb.net/?retryWrites=true&w=majority&appName=heodongun';
+const url = mongoURI;
 
 new MongoClient(url).connect().then((client) => {
   console.log('DB연결성공');
@@ -74,7 +75,7 @@ app.get('/', async (request, respond) => {
 app.get('/heart', async (request, respond) => {
   heart = request.user ? request.user.heart : null;
   heart = parseInt(heart);
-  let other=request.user ? '('+request.user.other+')' : null;
+  let other=request.user ? '연결 : ('+request.user.other+')' : null;
   respond.render('myInfo.ejs', { username: request.user ? request.user.username : null, heart: heart ,other:other});
 });
 
@@ -144,7 +145,7 @@ app.post('/saveScore', async (req, res) => {
       result3 = String(result3 + 1);
       await db.collection('user').updateOne(
           { _id: new ObjectId(req.user._id) },
-          { $set: { heart: result2, today: "1" } }
+          { $set: { heart: result2, today: "1" } }//할때 주석제거
       );
       await db.collection('user').updateOne(
         { username: result.username },
@@ -154,7 +155,7 @@ app.post('/saveScore', async (req, res) => {
     else{
       await db.collection('user').updateOne(
         { _id: new ObjectId(req.user._id) },
-        { $set: { today: "1" } }
+        { $set: { today: "1" } }//이거 나중에 진짜는 1로 바꿔
     );
     }
   }
